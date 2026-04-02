@@ -29,12 +29,11 @@ moms_project/
 ## 🚀 Local Development
 To view the website locally:
 1. Clone the repository.
-2. Open any HTML file in a modern browser, or run a local server:
-   ```bash
-   # Using Python
+2. Run a local server in the terminal:
+   ```
    python -m http.server 8000
    ```
-3. Visit `http://localhost:8000`.
+3. Open a new tab in a modern browser, Visit `http://localhost:8000`.
 
 ## 🌐 Deployment to GoDaddy
 This is a static website, making it compatible with any standard web host.
