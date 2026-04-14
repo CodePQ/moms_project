@@ -8,33 +8,134 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Lora:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .phase-card {
+            background: var(--color-linen);
+            padding: var(--spacing-xl);
+            border-radius: 4px;
+            margin-bottom: var(--spacing-xl);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        .phase-card h2 {
+            font-size: 2.25rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-ink);
+        }
+        .phase-card p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .phase-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+        .phase-card li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        .phase-card li::before {
+            content: "•";
+            color: var(--color-muted-slate);
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+            line-height: 1;
+            top: 2px;
+        }
+    </style>
 </head>
 
 <body>
     <nav>
         <div class="container nav-content"><a href="index.html" class="logo">THE QUIET RETURN</a>
-            <div class="nav-links"><a href="index.html">The Book</a><a href="community.html">Community</a><a
+            <div class="nav-links"><a href="book.html">The Book</a><a href="community.html">Community</a><a
                     href="circle.html">Circle</a><a href="becoming.html"
-                    style="color:var(--color-muted-slate);">Becoming</a><a href="bridge.html">Bridge</a><a
+                    style="color:var(--color-muted-slate);">Becoming</a><!-- <a href="bridge.html">Bridge</a> --><a
                     href="connect.html">Connect</a></div><a href="reader-portal.html" class="btn btn-outline"
                 style="padding: 0.5rem 1rem; font-size: 0.7rem;">Reader Portal</a>
         </div>
     </nav>
-    <section class="section" style="padding-top: var(--spacing-xl);">
+    
+    <header class="hero" style="min-height: 60vh; background: var(--color-warm-sand); display: flex; align-items: center; justify-content: center; text-align: center; padding: var(--spacing-xl) 0;">
         <div class="container">
-            <h1 class="font-serif reveal" style="font-size: 3rem; margin-bottom: var(--spacing-md);">Return & Becoming
-            </h1>
-            <p class="reveal" style="max-width: 600px; margin-bottom: var(--spacing-lg);">Personal 1:1 guidance for the
-                woman ready to step into her own essence.</p>
-            <div class="journey-card reveal" style="max-width: 600px; border-left: 4px solid var(--color-muted-slate);">
-                <h3>Personal Guidance</h3>
-                <p>Gentle support as you navigate midlife.</p><a href="connect.html" class="btn"
-                    style="margin-top: 1rem;">Book a Discovery Call</a>
+            <h1 class="font-serif reveal" style="font-size: 3.5rem; margin-bottom: var(--spacing-md);">The Return & The Becoming</h1>
+            <p class="font-serif reveal" style="font-size: 1.5rem; max-width: 800px; margin: 0 auto; line-height: 1.6; color: var(--color-warm-stone);">
+                Before anything changes&hellip; there is a return.<br>
+                Not a becoming. Not a fixing. Not a reinvention.<br>
+                Just a quiet, honest return to yourself.
+            </p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <div class="reveal" style="text-align: center; margin-bottom: var(--spacing-xl);">
+                <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                    The Return & The Becoming is a deeply personal space for women who feel ready to move beyond reflection and begin gently shaping a life that feels more aligned with who they truly are.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    This is not a program or a prescribed path. It is a space we enter together &mdash; where you are met exactly as you are, without expectation or pressure to become something else.
+                </p>
             </div>
+
+            <div class="phase-card reveal">
+                <h2 class="font-serif">Phase 1: The Return</h2>
+                <p>This is where we begin. A slowing down. A softening. A listening.</p>
+                <p>Together, we gently create space to:</p>
+                <ul>
+                    <li>Notice what feels off &mdash; without needing to name it immediately.</li>
+                    <li>Reconnect with your body, your inner voice, your own rhythm.</li>
+                    <li>Release the pressure to perform, fix, or figure it all out.</li>
+                    <li>Begin telling the truth &mdash; quietly, honestly, in your own time.</li>
+                </ul>
+                <p style="font-style: italic; color: var(--color-warm-stone);">There is nothing to change here.<br>Only something to come back to.</p>
+            </div>
+
+            <div class="phase-card reveal" style="margin-bottom: var(--spacing-xl);">
+                <h2 class="font-serif">Phase 2: Becoming</h2>
+                <p>Only after the return begins&hellip; something else naturally emerges. Not forced. Not rushed. But felt.</p>
+                <p>Becoming is not about becoming someone new. It is about living from what has been uncovered. In this phase, we gently explore:</p>
+                <ul>
+                    <li>What is now true for you?</li>
+                    <li>What no longer fits?</li>
+                    <li>What wants to shift, realign, or take shape?</li>
+                    <li>How to move forward in a way that feels sustainable and real?</li>
+                </ul>
+                <p style="font-style: italic; color: var(--color-warm-stone);">This is not transformation as performance.<br>It is alignment as lived experience.</p>
+            </div>
+
+            <div class="reveal" style="text-align: center; margin-bottom: var(--spacing-xl); padding-top: var(--spacing-lg); border-top: 1px solid rgba(0,0,0,0.1);">
+                <h3 class="font-serif" style="font-size: 2rem; margin-bottom: 1rem;">Who This Is For</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">For the woman who:</p>
+                <div style="display: inline-block; text-align: left;">
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;">&mdash; Feels like something no longer fits, even if she can't explain why.</li>
+                        <li style="margin-bottom: 0.5rem;">&mdash; Has held roles, expectations, and responsibilities for a long time.</li>
+                        <li style="margin-bottom: 0.5rem;">&mdash; Is tired &mdash; but not just physically.</li>
+                        <li style="margin-bottom: 0.5rem;">&mdash; Is ready for something quieter, truer, and more sustainable.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="reveal" style="text-align: center; padding: var(--spacing-lg) 0;">
+                <p class="font-serif" style="font-size: 1.5rem; margin-bottom: var(--spacing-md); line-height: 1.6;">
+                    You don't need to know exactly what you're looking for.<br>
+                    You only need to recognize that something in you is ready.
+                </p>
+                <a href="connect.html" class="btn">Begin the Conversation</a>
+            </div>
+
         </div>
     </section>
+
     <footer>
-        <div class="container" style="text-align:center;">&copy; 2026 THE QUIET RETURN</div>
+        <div class="container" style="text-align:center;">
+            <p>&copy; 2026 THE QUIET RETURN | <a href="disclaimer.html" style="opacity: 0.7; text-decoration: underline;">Disclaimer</a></p>
+        </div>
     </footer>
     <script src="js/main.js"></script>
 </body>
