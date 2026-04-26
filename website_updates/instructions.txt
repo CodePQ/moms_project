@@ -1,0 +1,102 @@
+
+
+🌿 Website Update Instructions for Designer
+A Quiet Return — Final Pre-Order Optimization
+✧ Objective
+Refine the current website to:
+Maintain the calm, spacious, reflective tone
+Improve clarity of action (pre-order / purchase)
+Gently guide visitors toward the book without overwhelming the experience
+This is a
+ 
+light structural enhancement
+, not a redesign.
+✧ 1. HERO SECTION (Homepage Top)
+Layout Update
+Preferred Layout (2-column):
+LEFT: Existing text (headline, subhead, buttons)
+RIGHT: Book cover image
+Alternate (if centered layout must remain):
+Keep text centered
+Place book cover centered below buttons
+Book Cover
+Use ONLY the book cover (no journal at this stage)
+Medium size, vertically oriented
+Add very subtle shadow for depth
+Maintain generous spacing (do not crowd text)
+CTA Button Update
+Change primary button from:
+“Begin with the Book”
+To:
+“Pre-order the Book”
+ 
+(current)
+“Order the Book”
+ 
+(launch day swap)
+Keep secondary button:
+“Explore the Work”
+Add Supporting Line (under buttons)
+Now available for pre-order on Amazon.
+Link this text OR primary button to:
+ 
+https://www.amazon.com/dp/B0GWVY8L18
+✧ 2. BOOK PAGE (Top Section)
+Add
+ 
+“Book Anchor Block”
+ 
+ABOVE existing introduction text
+Structure (center-aligned):
+Book cover image
+Title:
+ 
+A Quiet Return
+One-line descriptor:
+ 
+> A gentle invitation to come back to yourself.
+CTA Button:
+“Pre-order on Amazon”
+Link: https://www.amazon.com/dp/B0GWVY8L18
+Important
+Do NOT alter existing introduction text
+This block simply adds clarity and conversion
+✧ 3. MID-PAGE CTA (Book Page)
+Insert approximately halfway through the text:
+If this resonates, you can begin here.
+Button:
+“Pre-order the Book”
+Link: https://www.amazon.com/dp/B0GWVY8L18
+Style:
+Center aligned
+Minimal (no boxes, no heavy styling)
+✧ 4. DESIGN GUIDELINES
+Maintain current aesthetic (minimal, calm, spacious)
+Preserve typography and color palette
+Avoid adding clutter or multiple competing elements
+Ensure CTA buttons are clearly visible but still soft in tone
+✧ 5. LAUNCH DAY TEXT SWAPS (Prepare in Advance)
+Update the following:
+“Pre-order the Book”
+ 
+→
+ 
+“Order the Book”
+“Pre-order on Amazon”
+ 
+→
+ 
+“Order on Amazon”
+“Now available for pre-order”
+ 
+→
+ 
+“Now available”
+Amazon link remains the same unless updated.
+✧ Final Note
+The goal is not to create a traditional sales page.
+The site should feel like a place of reflection—
+ 
+with clear, gentle pathways for those who are ready to take the next step.
+Clarity + calm = conversion for this audience.
+🩷
