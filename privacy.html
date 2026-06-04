@@ -1,3 +1,407 @@
-Quiet Return Studio is a private internal tool used solely by the account owner 
-to manage and schedule Pinterest content for lorrainepaquette.com. 
-No user data is collected, stored, or shared with third parties.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="p:domain_verify" content="4a22d23a169dabc7418ac20c4586351c"/>
+  <title>Privacy Policy | The Quiet Return</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #f9f6f1;
+      --bg-alt:    #f2ede4;
+      --text:      #2a2219;
+      --text-mid:  #5c5044;
+      --text-soft: #9c8e82;
+      --accent:    #b07d50;
+      --border:    #ddd5c8;
+      --nav-bg:    #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      text-decoration: none;
+      transition: color 0.25s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-portal a {
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 0.4rem 1rem;
+      transition: all 0.25s;
+    }
+
+    .nav-portal a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+    }
+
+    .page-header .eyebrow {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+    }
+
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 300;
+      color: var(--text);
+      letter-spacing: 0.04em;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+
+    .page-header .meta {
+      font-size: 0.75rem;
+      color: var(--text-soft);
+      letter-spacing: 0.1em;
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 5rem 2rem 6rem;
+    }
+
+    .intro {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--text-mid);
+      line-height: 1.95;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 3.5rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section p {
+      font-size: 0.93rem;
+      color: var(--text-mid);
+      margin-bottom: 0.85rem;
+      line-height: 1.9;
+    }
+
+    section ul {
+      list-style: none;
+      margin: 0.5rem 0 0.85rem;
+    }
+
+    section ul li {
+      font-size: 0.93rem;
+      color: var(--text-mid);
+      padding: 0.3rem 0 0.3rem 1.5rem;
+      position: relative;
+      line-height: 1.85;
+    }
+
+    section ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    a:hover { border-bottom-color: var(--accent); }
+
+    .rule {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
+
+    .contact-note {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 1.8rem 2.2rem;
+      margin-top: 3.5rem;
+    }
+
+    .contact-note p {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      margin: 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--nav-bg);
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.72rem;
+      color: var(--text-soft);
+      letter-spacing: 0.1em;
+      line-height: 2;
+    }
+
+    footer a {
+      color: var(--text-soft);
+      border: none;
+    }
+
+    footer a:hover { color: var(--accent); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    main { animation: fadeUp 0.6s ease both; }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 1.2rem; }
+      .nav-links { display: none; }
+      main { padding: 3rem 1.4rem 4rem; }
+      .page-header { padding: 3.5rem 1.4rem 3rem; }
+      .contact-note { padding: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="https://lorrainepaquette.com/index.html" class="nav-brand">The Quiet Return</a>
+    <ul class="nav-links">
+      <li><a href="https://lorrainepaquette.com/book.html">The Book</a></li>
+      <li><a href="https://lorrainepaquette.com/community.html">Community</a></li>
+      <li><a href="https://lorrainepaquette.com/circle.html">Circle</a></li>
+      <li><a href="https://lorrainepaquette.com/pathway.html">Pathway</a></li>
+      <li><a href="https://lorrainepaquette.com/connect.html">Connect</a></li>
+    </ul>
+    <div class="nav-portal">
+      <a href="https://lorrainepaquette.com/reader-portal.html">Reader Portal</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <p class="eyebrow">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective date: June 4, 2026 &nbsp;·&nbsp; Last updated: June 4, 2026</p>
+  </div>
+
+  <main>
+
+    <p class="intro">
+      Your privacy matters here. This policy explains clearly what information is collected
+      when you visit this website, how it is used, and what choices you have.
+    </p>
+
+    <section>
+      <h2>Who We Are</h2>
+      <p>
+        This website is operated by Lorraine Paquette, author of <em>A Quiet Return</em> and
+        founder of The Quiet Return. It is a personal author website located at
+        <a href="https://lorrainepaquette.com">lorrainepaquette.com</a>.
+        For questions about this policy, please reach out via the
+        <a href="https://lorrainepaquette.com/connect.html">Connect</a> page or directly
+        at <a href="mailto:home@lorrainepaquette.com">home@lorrainepaquette.com</a>.
+      </p>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>Information We Collect</h2>
+      <p>We collect only the minimum information necessary to operate this website:</p>
+      <ul>
+        <li><strong>Email address</strong> — only if you voluntarily subscribe to the mailing list via the newsletter signup form.</li>
+        <li><strong>Name</strong> — only if you provide it when subscribing or submitting a contact form.</li>
+        <li><strong>Usage data</strong> — standard web analytics such as pages visited, time on site, and referring source, collected in aggregate and without personally identifying you.</li>
+      </ul>
+      <p>We do not collect payment information, sensitive personal data, or any information from children under the age of 13.</p>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>How We Use Your Information</h2>
+      <p>Information collected on this website is used solely for the following purposes:</p>
+      <ul>
+        <li>To send newsletters and updates about <em>A Quiet Return</em> and The Quiet Return, if you have subscribed.</li>
+        <li>To respond to messages sent through the contact form or via email.</li>
+        <li>To understand how visitors use the site so we can improve it.</li>
+      </ul>
+      <p>We will never sell, rent, or share your personal information with third parties for marketing purposes.</p>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>Email Communications</h2>
+      <p>
+        If you subscribe to the mailing list, your email address is stored and managed
+        through MailerLite, a third-party email service provider. MailerLite's privacy
+        practices are governed by their own
+        <a href="https://www.mailerlite.com/legal/privacy-policy" target="_blank" rel="noopener">privacy policy</a>.
+      </p>
+      <p>
+        You may unsubscribe from email communications at any time by clicking the
+        unsubscribe link included in every email, or by contacting us directly.
+      </p>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>Cookies</h2>
+      <p>
+        This website may use essential cookies to support basic functionality.
+        We do not use tracking cookies or third-party advertising cookies.
+        Analytics, if used, are configured to respect visitor privacy and do not
+        identify you personally.
+      </p>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>Third-Party Services</h2>
+      <p>This website uses the following third-party services, each governed by their own privacy policies:</p>
+      <ul>
+        <li><strong>MailerLite</strong> — email list management and newsletter delivery.</li>
+        <li><strong>GitHub Pages</strong> — website hosting.</li>
+        <li><strong>Pinterest</strong> — social sharing and content discovery.</li>
+      </ul>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>Your Rights</h2>
+      <p>Depending on your location, you may have the right to:</p>
+      <ul>
+        <li>Access the personal information we hold about you.</li>
+        <li>Request correction or deletion of your personal information.</li>
+        <li>Withdraw consent to email communications at any time.</li>
+        <li>Lodge a complaint with your local data protection authority.</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us at <a href="mailto:home@lorrainepaquette.com">home@lorrainepaquette.com</a>.</p>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>
+        We may update this privacy policy from time to time. When we do, we will revise
+        the "last updated" date at the top of this page. Continued use of the website
+        after any changes constitutes acceptance of the updated policy.
+      </p>
+    </section>
+
+    <div class="contact-note">
+      <p>
+        <strong>Questions or requests?</strong><br>
+        If you have any questions about this privacy policy or how your information is handled,
+        please reach out at <a href="mailto:home@lorrainepaquette.com">home@lorrainepaquette.com</a>
+        or visit the <a href="https://lorrainepaquette.com/connect.html">Connect</a> page.
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>©2026 Lorraine Paquette. All rights reserved.</p>
+    <p>The Quiet Return™ &nbsp;|&nbsp; <a href="https://lorrainepaquette.com/disclaimer.html">Disclaimer</a> &nbsp;|&nbsp; Privacy Policy</p>
+  </footer>
+
+</body>
+</html>
