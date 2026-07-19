@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "PowerShell(node --version 2>&1)",
+      "PowerShell(python --version 2>&1)"
+    ]
+  }
+}
