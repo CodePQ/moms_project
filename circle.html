@@ -49,7 +49,7 @@
                 <p style="margin-bottom: 1.5rem;">Whether this is your first gathering or you've joined us before, you
                     are warmly welcome.</p>
                 <div style="text-align: center; margin-top: 2rem; margin-bottom: 3rem;">
-                    <a href="registration.html" class="btn">Join the Gathering</a>
+                    <a href="registration.html" class="btn cta-register">Join the Gathering</a>
                 </div>
             </div>
 
@@ -199,7 +199,7 @@
                 </div>
 
                 <div style="text-align: center; margin-top: 2rem;">
-                    <a href="registration.html" class="btn">Register Here</a>
+                    <a href="registration.html" class="btn cta-register">Register Here</a>
                 </div>
             </div>
 
@@ -212,7 +212,7 @@
                     And you don't have to rush that.<br>
                     You only have to begin.
                 </p>
-                <a href="registration.html" class="btn" style="margin-bottom: 1rem;">Reserve Your Place</a>
+                <a href="registration.html" class="btn cta-register" style="margin-bottom: 1rem;">Reserve Your Place</a>
                 <p style="font-size: 1rem; font-style: italic; margin-bottom: 1.5rem;">I'd be honored to welcome you.
                 </p>
                 <p style="font-size: 1rem; line-height: 1.8; color: var(--color-warm-stone); font-style: italic;">
@@ -231,7 +231,89 @@
             </p>
         </div>
     </footer>
+    <div class="modal-overlay" id="register-modal-overlay">
+        <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="register-modal-title">
+            <button type="button" class="modal-close" id="register-modal-close" aria-label="Close">&times;</button>
+            <h3 id="register-modal-title" class="font-serif" style="font-size: 1.4rem; margin-bottom: 0.5rem;">Before
+                you go&hellip;</h3>
+            <p style="margin-bottom: 1.25rem; opacity: 0.8;">Share your name and email so we can keep in touch, then
+                we'll take you to registration.</p>
+            <form id="register-modal-form">
+                <input type="text" name="name" id="register-modal-name" class="newsletter-input" placeholder="Your name" required>
+                <input type="email" name="email" id="register-modal-email" class="newsletter-input" placeholder="Your email" required>
+                <!-- Honeypot: left blank by humans, often auto-filled by bots. Hidden off-screen, not display:none. -->
+                <input type="text" name="company" id="register-modal-company" autocomplete="off" tabindex="-1"
+                    style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0;">
+                <input type="hidden" name="renderedAt" id="register-modal-rendered-at">
+                <button type="submit" class="btn" style="width: 100%; margin-top: 0.5rem;">Continue to
+                    Registration</button>
+            </form>
+        </div>
+    </div>
     <script src="js/main.js"></script>
+    <script>
+        const REGISTER_FUNCTION_URL = "https://ykttcsdlkavdewsjdadz.supabase.co/functions/v1/submit-contact";
+        const REGISTRATION_PAGE_URL = "registration.html";
+
+        const registerOverlay = document.getElementById('register-modal-overlay');
+        const registerForm = document.getElementById('register-modal-form');
+
+        function openRegisterModal(e) {
+            e.preventDefault();
+            document.getElementById('register-modal-rendered-at').value = Date.now();
+            registerOverlay.classList.add('is-open');
+        }
+
+        function closeRegisterModal() {
+            registerOverlay.classList.remove('is-open');
+        }
+
+        document.querySelectorAll('.cta-register').forEach((link) => {
+            link.addEventListener('click', openRegisterModal);
+        });
+
+        document.getElementById('register-modal-close').addEventListener('click', closeRegisterModal);
+        registerOverlay.addEventListener('click', (e) => {
+            if (e.target === registerOverlay) closeRegisterModal();
+        });
+
+        function withTimeout(promise, ms) {
+            return Promise.race([
+                promise,
+                new Promise((resolve) => setTimeout(resolve, ms)),
+            ]);
+        }
+
+        registerForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = registerForm.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Continuing...';
+
+            const payload = {
+                name: document.getElementById('register-modal-name').value,
+                email: document.getElementById('register-modal-email').value,
+                company: document.getElementById('register-modal-company').value,
+                renderedAt: Number(document.getElementById('register-modal-rendered-at').value),
+                source: 'circle_interest',
+            };
+
+            try {
+                await withTimeout(
+                    fetch(REGISTER_FUNCTION_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload),
+                    }),
+                    4000
+                );
+            } catch (err) {
+                // Ignored intentionally: we redirect regardless of outcome.
+            } finally {
+                window.location.href = REGISTRATION_PAGE_URL;
+            }
+        });
+    </script>
 </body>
 
 </html>

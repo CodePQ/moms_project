@@ -12,13 +12,24 @@ const ALLOWED_ORIGINS = new Set([
   "https://www.lorrainepaquette.com",
 ]);
 
+// TEMPORARY, for pre-merge testing in a GitHub Codespace: allow any Codespaces
+// preview URL (e.g. https://my-codespace-name-8000.app.github.dev). Remove
+// this once testing is done - see the comment further down.
+const CODESPACE_ORIGIN_RE = /^https:\/\/[a-z0-9-]+-\d+\.app\.github\.dev$/;
+
 const MIN_SECONDS_BEFORE_SUBMIT = 3;
 const RATE_LIMIT_WINDOW_MINUTES = 10;
 const RATE_LIMIT_MAX_SUBMISSIONS = 3;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const ALLOWED_SOURCES = new Set(["contact_form", "circle_interest"]);
+
+function isAllowedOrigin(origin: string | null): boolean {
+  if (!origin) return false;
+  return ALLOWED_ORIGINS.has(origin) || CODESPACE_ORIGIN_RE.test(origin);
+}
 
 function corsHeaders(origin: string | null) {
-  const allowOrigin = origin && ALLOWED_ORIGINS.has(origin) ? origin : "https://lorrainepaquette.com";
+  const allowOrigin = isAllowedOrigin(origin) ? origin! : "https://lorrainepaquette.com";
   return {
     "Access-Control-Allow-Origin": allowOrigin,
     "Access-Control-Allow-Headers": "content-type",
@@ -59,6 +70,7 @@ Deno.serve(async (req) => {
   const message = typeof body.message === "string" ? body.message.trim() : "";
   const company = typeof body.company === "string" ? body.company.trim() : ""; // honeypot
   const renderedAt = typeof body.renderedAt === "number" ? body.renderedAt : 0;
+  const source = typeof body.source === "string" && ALLOWED_SOURCES.has(body.source) ? body.source : "contact_form";
 
   // Silent spam rejection: pretend success so bots don't learn what tripped them.
   const submittedTooFast = Date.now() - renderedAt < MIN_SECONDS_BEFORE_SUBMIT * 1000;
@@ -100,7 +112,7 @@ Deno.serve(async (req) => {
 
   const { error: insertError } = await supabase
     .from("contacts")
-    .insert({ name, email, message: message || null, ip_hash: ipHash });
+    .insert({ name, email, message: message || null, ip_hash: ipHash, source });
 
   if (insertError) {
     return new Response(JSON.stringify({ error: "Something went wrong. Please try again." }), { status: 500, headers });
