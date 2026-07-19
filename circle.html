@@ -254,11 +254,29 @@
     <script>
         const REGISTER_FUNCTION_URL = "https://ykttcsdlkavdewsjdadz.supabase.co/functions/v1/submit-contact";
         const REGISTRATION_PAGE_URL = "registration.html";
+        const REGISTER_STORAGE_KEY = 'qr_circle_registered';
+
+        function hasAlreadyRegistered() {
+            try {
+                return localStorage.getItem(REGISTER_STORAGE_KEY) === '1';
+            } catch (err) {
+                return false; // e.g. localStorage blocked in this browser - just ask again
+            }
+        }
+
+        function markAsRegistered() {
+            try {
+                localStorage.setItem(REGISTER_STORAGE_KEY, '1');
+            } catch (err) {
+                // Ignored: worst case they see the modal again next time.
+            }
+        }
 
         const registerOverlay = document.getElementById('register-modal-overlay');
         const registerForm = document.getElementById('register-modal-form');
 
         function openRegisterModal(e) {
+            if (hasAlreadyRegistered()) return; // let the link navigate straight to registration.html
             e.preventDefault();
             document.getElementById('register-modal-rendered-at').value = Date.now();
             registerOverlay.classList.add('is-open');
@@ -310,6 +328,7 @@
             } catch (err) {
                 // Ignored intentionally: we redirect regardless of outcome.
             } finally {
+                markAsRegistered();
                 window.location.href = REGISTRATION_PAGE_URL;
             }
         });
