@@ -142,6 +142,19 @@ nav { padding: var(--spacing-md) 0; position: fixed; top: 0; width: 100%; z-inde
     }
 }
 
+.flex-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: var(--spacing-lg);
+  align-items: flex-start; /* keeps both columns top-aligned even if one is taller */
+}
+
+.flex-col {
+  flex: 1;
+  min-width: 0; /* prevents flex children from overflowing on narrow screens */
+  margin-bottom: 0; /* the container now owns the bottom spacing */
+}
+
 footer { background: var(--color-misty-blue); padding: var(--spacing-lg) 0; margin-top: var(--spacing-xl); }
 .newsletter-box { max-width: 600px; margin: 0 auto; text-align: center; }
 .newsletter-input { width: 100%; padding: 1rem; border: 1px solid var(--color-seascape-blue); background: transparent; margin-bottom: var(--spacing-sm); font-family: var(--font-body); }
