@@ -142,9 +142,60 @@ nav { padding: var(--spacing-md) 0; position: fixed; top: 0; width: 100%; z-inde
     }
 }
 
+.flex-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: var(--spacing-lg);
+  align-items: flex-start; /* keeps both columns top-aligned even if one is taller */
+}
+
+.flex-col {
+  flex: 1;
+  min-width: 0; /* prevents flex children from overflowing on narrow screens */
+  margin-bottom: 0; /* the container now owns the bottom spacing */
+}
+
 footer { background: var(--color-misty-blue); padding: var(--spacing-lg) 0; margin-top: var(--spacing-xl); }
 .newsletter-box { max-width: 600px; margin: 0 auto; text-align: center; }
 .newsletter-input { width: 100%; padding: 1rem; border: 1px solid var(--color-seascape-blue); background: transparent; margin-bottom: var(--spacing-sm); font-family: var(--font-body); }
+.form-textarea { resize: vertical; font-size: 1rem; }
+.form-status { margin-top: 0.75rem; font-size: 0.9rem; text-align: center; min-height: 1.2em; }
+.form-status-success { color: var(--color-seascape-blue); }
+.form-status-error { color: #b3452c; }
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(27, 38, 59, 0.55);
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+    z-index: 1000;
+}
+.modal-overlay.is-open { display: flex; }
+.modal-dialog {
+    position: relative;
+    background: var(--color-soft-cream);
+    border-radius: 6px;
+    padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(27, 38, 59, 0.3);
+}
+.modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--color-deep-slate);
+    opacity: 0.6;
+}
+.modal-close:hover { opacity: 1; }
 
 
 @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
