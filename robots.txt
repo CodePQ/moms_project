@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /bridge.html
+Disallow: /registration.html
+
+Sitemap: https://lorrainepaquette.com/sitemap.xml
