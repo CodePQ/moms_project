@@ -249,17 +249,34 @@
     <div class="modal-overlay" id="register-modal-overlay">
         <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="register-modal-title">
             <button type="button" class="modal-close" id="register-modal-close" aria-label="Close">&times;</button>
+            <div class="modal-icon" aria-hidden="true">&#9711;</div>
+            <h2 id="register-modal-title" class="font-serif modal-title">Let's Reserve Your Place</h2>
+            <p class="modal-subtitle">Just your name and email, and I'll take it from there.</p>
             <form id="register-modal-form">
-                <input type="text" name="name" id="register-modal-name" class="newsletter-input" placeholder="Your name"
-                    required>
-                <input type="email" name="email" id="register-modal-email" class="newsletter-input"
-                    placeholder="Your email" required>
+                <div class="form-field">
+                    <label for="register-modal-name">Your name</label>
+                    <input type="text" name="name" id="register-modal-name" class="newsletter-input"
+                        placeholder="Jane Smith" required>
+                </div>
+                <div class="form-field">
+                    <label for="register-modal-email">Your email</label>
+                    <input type="email" name="email" id="register-modal-email" class="newsletter-input"
+                        placeholder="jane@email.com" required>
+                </div>
                 <!-- Honeypot: left blank by humans, often auto-filled by bots. Hidden off-screen, not display:none. -->
                 <input type="text" name="company" id="register-modal-company" autocomplete="off" tabindex="-1"
                     style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0;">
                 <input type="hidden" name="renderedAt" id="register-modal-rendered-at">
                 <button type="submit" class="btn" style="width: 100%; margin-top: 0.5rem;">Continue to
                     Registration</button>
+                <p class="modal-trust">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    Kept private, never shared. <a href="privacy.html">Privacy Policy</a>
+                </p>
             </form>
         </div>
     </div>
