@@ -11,19 +11,28 @@ The website adheres to a "Calm and Reflective" aesthetic, using a palette inspir
 ## 📂 Project Structure
 ```text
 moms_project/
-├── assets/             # Images and visual assets
-│   └── hero-bg.png     # Custom generated misty landscape
+├── assets/              # Images and visual assets
+│   ├── hero-bg.png      # Custom generated misty landscape
+│   └── reflections/     # Gallery of Reflections images
 ├── css/
-│   └── styles.css      # Core design system and component styles
+│   └── styles.css       # Core design system and component styles
 ├── js/
-│   └── main.js        # Scroll-reveal animations and navigation logic
-├── index.html          # Homepage & "The Book" landing
-├── community.html      # Reflective space details
-├── circle.html         # Guided group reflection info
-├── becoming.html       # 1:1 guidance details
-├── bridge.html         # Partner & couple resources
-├── connect.html        # Contact and discovery call form
-└── reader-portal.html  # Exclusive landing for book readers
+│   └── main.js          # Scroll-reveal animations and smooth-scroll logic
+├── supabase/             # Edge function + SQL for the contact/registration forms
+├── index.html            # Homepage
+├── book.html             # The Book landing / excerpt
+├── community.html        # Reflective space details
+├── circle.html           # Guided monthly group gathering info
+├── pathway.html          # 1:1 guidance details ("Return To You" / "Becoming")
+├── bridge.html           # Partner & couple resources (unfinished, noindexed, not in nav)
+├── connect.html          # Contact form
+├── gallery.html          # Gallery of Reflections (image gallery)
+├── reader-portal.html    # Landing page for book readers
+├── registration.html     # Circle gathering registration + Stripe buy button
+├── privacy.html          # Privacy policy
+├── disclaimer.html       # Business/website disclaimer
+├── robots.txt
+└── sitemap.xml
 ```
 
 ## 🚀 Local Development
