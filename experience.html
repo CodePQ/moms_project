@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return to You Experience | The Quiet Return</title>
+    <meta name="description" content="A quiet space to pause, reflect, and reconnect with yourself. A complimentary invitation for the women of The Quiet Return community.">
+    <link rel="canonical" href="https://lorrainepaquette.com/experience.html">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="/assets/web_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Lora:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container nav-content"><a href="index.html" class="logo">THE QUIET RETURN</a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+            <div class="nav-links"><a href="book.html">The Book</a><a href="community.html">Community</a><a
+                    href="circle.html">Circle</a><a
+                    href="pathway.html">Pathway</a><a href="gallery.html">Gallery</a><!-- <a href="bridge.html">Bridge</a> --><a
+                    href="connect.html">Connect</a>
+            </div>
+            <div class="nav-actions"><a href="reader-portal.html" class="btn btn-outline"
+                style="padding: 0.5rem 1rem; font-size: 0.7rem;">Reader Portal</a>
+                <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+            </div>
+        </div>
+    </nav>
+    <section class="section" style="padding-top: var(--spacing-xl);">
+        <div class="container" style="max-width: 875px;">
+            <h1 class="font-serif reveal" style="font-size: 2.5rem; margin-bottom: 0.5rem; text-align: center;">Return to You Experience</h1>
+            <p class="font-serif reveal"
+                style="font-size: 1.6rem; text-align: center; margin-bottom: 0.75rem; color: var(--color-seascape-blue);">
+                A quiet space to pause, reflect, and reconnect with yourself.</p>
+            <p class="reveal"
+                style="text-align: center; font-style: italic; margin-bottom: var(--spacing-lg); opacity: 0.85;">
+                A complimentary invitation for the women of The Quiet Return community.</p>
+
+            <div class="reveal" style="margin-bottom: var(--spacing-lg);">
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">There are seasons when life is full of responsibilities, people to care for, and things that need our attention. And somewhere in the middle of it all, we may begin wondering: Where am I in all of this?</p>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">The Return to You Experience is an opportunity to spend a little time together and listen to what you may have been noticing in yourself. Over approximately 75 minutes, I&rsquo;ll gently guide us through four movements: <b>REMEMBER &rarr; RETURN &rarr; CHOOSE &rarr; STAY.</b></p>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">There is nothing to prepare. You don&rsquo;t need to have read <em>A Quiet Return</em>, arrive with answers, or share anything you would rather keep to yourself. Simply come as you are.</p>
+            </div>
+
+            <div class="flex-container">
+                <div class="reveal flex-col">
+                    <h2 class="font-serif" style="font-size: 1.6rem; margin-bottom: 1.25rem; color: var(--color-seascape-blue);">Choose the date that works for you</h2>
+                    <ul style="font-size: 1.1rem; line-height: 2.3; padding-left: 1rem; margin-bottom: 1rem;">
+                        <li>Tuesday, November 17, 2026 &bull; 7:00&ndash;8:15 PM ET</li>
+                        <li>Saturday, November 21, 2026 &bull; 10:00&ndash;11:15 AM ET</li>
+                    </ul>
+                    <p style="font-size: 1.05rem; line-height: 1.8;">Both dates offer the same guided Experience, online via Zoom. Please choose one date.</p>
+                    <p style="font-size: 1.05rem; line-height: 1.8;">Complimentary for members of The Quiet Return community.</p>
+                </div>
+
+                <div class="reveal flex-col">
+                    <form id="experience-form" novalidate>
+                        <div class="form-field">
+                            <label for="exp-first-name">First name</label>
+                            <input type="text" name="first_name" id="exp-first-name" class="newsletter-input" autocomplete="given-name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="exp-email">Email address</label>
+                            <input type="email" name="email" id="exp-email" class="newsletter-input" autocomplete="email" required>
+                        </div>
+                        <fieldset class="form-field" style="border: 0; padding: 0; margin: 0 0 1rem;">
+                            <legend style="margin-bottom: 0.5rem;">Choose your date</legend>
+                            <label style="display: block; margin-bottom: 0.5rem;"><input type="radio" name="experience_date" value="2026-11-17" required> Tuesday, November 17 at 7 PM ET</label>
+                            <label style="display: block;"><input type="radio" name="experience_date" value="2026-11-21"> Saturday, November 21 at 10 AM ET</label>
+                        </fieldset>
+                        <!-- Honeypot: left blank by humans, often auto-filled by bots. -->
+                        <input type="text" name="company" id="exp-company" autocomplete="off" tabindex="-1"
+                            style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0;">
+                        <input type="hidden" name="renderedAt" id="exp-rendered-at">
+                        <button type="submit" class="btn" style="width: 100%;">Reserve My Place</button>
+                        <p style="font-size: 0.85rem; line-height: 1.6; opacity: 0.8; margin-top: 1rem;">By registering, you agree to receive emails about this Experience, including your Zoom details and reminders. These emails are not a subscription to marketing updates.</p>
+                        <p id="exp-message" role="status" aria-live="polite" style="font-size: 1.05rem; line-height: 1.7; margin-top: 1rem;"></p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="reveal" style="font-size: 1.05rem; line-height: 1.8; text-align: center; margin-top: var(--spacing-lg);">
+                <h2 class="font-serif" style="font-size: 1.6rem; margin-bottom: 1rem; color: var(--color-seascape-blue);">What to expect</h2>
+                <p><b>REMEMBER</b> &mdash; notice where you are.</p>
+                <p><b>RETURN</b> &mdash; make room to hear yourself.</p>
+                <p><b>CHOOSE</b> &mdash; consider one honest choice.</p>
+                <p style="margin-bottom: 1.5rem;"><b>STAY</b> &mdash; keep returning when life gets full.</p>
+                <p style="margin-bottom: 1.5rem;">No preparation required, and sharing is optional.</p>
+                <p class="font-serif" style="font-size: 1.2rem;">Lorraine Paquette</p>
+                <p style="font-style: italic; opacity: 0.8;">Author, <em>A Quiet Return</em></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container" style="text-align:center;">
+            <p>&copy;2026 Lorraine Paquette. All rights reserved.</p>
+            <p>The Quiet Return&trade; | <a href="disclaimer.html" style="text-decoration: underline;">Disclaimer</a>
+                | <a href="privacy.html" style="text-decoration: underline;">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        // TODO(webmaster): set to the server-side endpoint that records the registration and triggers the Zapier flow.
+        // Do not put a Zapier Catch Hook URL here. While empty, submissions show the failure message.
+        const EXPERIENCE_ENDPOINT = "";
+        const CONTACT_EMAIL = "[CONTACT EMAIL]"; // TODO: replace with the confirmed, monitored contact email.
+
+        const form = document.getElementById('experience-form');
+        const message = document.getElementById('exp-message');
+        document.getElementById('exp-rendered-at').value = Date.now();
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const data = new FormData(form);
+            const firstName = (data.get('first_name') || '').trim();
+            const email = (data.get('email') || '').trim();
+            const date = data.get('experience_date');
+            if (!firstName || !date || !form.elements.email.checkValidity() || !email) {
+                message.textContent = 'Please enter your first name, a valid email address, and choose a date.';
+                return;
+            }
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            message.textContent = '';
+            try {
+                if (!EXPERIENCE_ENDPOINT) throw new Error('not configured');
+                const res = await fetch(EXPERIENCE_ENDPOINT, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        first_name: firstName,
+                        email: email,
+                        experience_date: date,
+                        company: data.get('company'),
+                        renderedAt: Number(data.get('renderedAt')),
+                        source: 'community',
+                    }),
+                });
+                if (!res.ok) throw new Error('rejected');
+                form.reset();
+                message.textContent = 'You\u2019re registered! I\u2019m looking forward to sharing this time with you. Please check your email for your confirmation and Zoom details. \uD83E\uDD0D If the email doesn\u2019t arrive shortly, check your junk folder or contact ' + CONTACT_EMAIL + '.';
+            } catch (err) {
+                message.textContent = 'We couldn\u2019t complete your registration just now. Please try again or email ' + CONTACT_EMAIL + '.';
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+
+</html>
