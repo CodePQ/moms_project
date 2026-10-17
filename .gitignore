@@ -1,1 +1,4 @@
 supabase/.temp/
+
+# Local SQLite database
+server/data/

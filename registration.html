@@ -148,7 +148,9 @@
     </div>
     <script src="js/main.js"></script>
     <script>
-        const REGISTER_FUNCTION_URL = "https://ykttcsdlkavdewsjdadz.supabase.co/functions/v1/submit-contact";
+        const REGISTER_FUNCTION_URL = ["localhost", "127.0.0.1"].includes(location.hostname)
+            ? "/api/contact" // local SQLite backend: node server/server.js
+            : "https://ykttcsdlkavdewsjdadz.supabase.co/functions/v1/submit-contact";
         const CIRCLE_PAGE_URL = "circle.html";
         const REGISTER_STORAGE_KEY = 'qr_circle_registered';
 

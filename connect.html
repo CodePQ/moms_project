@@ -112,7 +112,9 @@
     <script>
         // TODO: replace with your real Supabase Edge Function URL after deploying
         // (find it in Supabase Dashboard -> Edge Functions -> submit-contact).
-        const CONTACT_FUNCTION_URL = "https://ykttcsdlkavdewsjdadz.supabase.co/functions/v1/submit-contact";
+        const CONTACT_FUNCTION_URL = ["localhost", "127.0.0.1"].includes(location.hostname)
+            ? "/api/contact" // local SQLite backend: node server/server.js
+            : "https://ykttcsdlkavdewsjdadz.supabase.co/functions/v1/submit-contact";
 
         document.getElementById('contact-rendered-at').value = Date.now();
 

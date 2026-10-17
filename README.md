@@ -58,3 +58,16 @@ This is a static website, making it compatible with any standard web host.
 
 ---
 *Created with care for The Quiet Return.*
+
+## Local database (development)
+
+`server/server.js` serves the site and stores form submissions in SQLite (`server/data/site.db`, git-ignored). No `npm install` needed; requires Node 22.5+.
+
+```
+node server/server.js     # http://localhost:8000
+```
+
+- `POST /api/contact` — contact form and Circle interest (same payload as the Supabase function).
+- `POST /api/experience-registration` — `{first_name, email, experience_date: "2026-11-17" | "2026-11-21"}`; dedupes by email + date and marks a date switch as `switched`.
+- On `localhost`, `connect.html` and `registration.html` post here; on the live site they still use Supabase.
+- Inspect data: `node -e "const {DatabaseSync}=require('node:sqlite');console.log(new DatabaseSync('server/data/site.db').prepare('select * from contacts').all())"`
